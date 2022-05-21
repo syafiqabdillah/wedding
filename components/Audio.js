@@ -52,20 +52,33 @@ function Audio() {
 
   return (
     <div
-      className={`fixed h-screen w-screen bg-gray-600 top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
+      className={`fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
         show ? 'bg-opacity-80' : 'bg-opacity-0'
       }`}
     >
       {show && (
         <div
+          data-aos="fade-up"
           onClick={playSound}
           className="bg-blue-200 hover:brightness-125 transition-all duration-300 font-macondo text-2xl cursor-pointer h-32 w-32 rounded-full flex justify-center items-center text-center z-10 opacity-100 "
         >
-          Open Invitation
+          Open
         </div>
       )}
+      <div className={`half-left h-full w-full bg-gray-600 opacity-70 absolute transition duration-500 left-0 top-0 ${ show ? '' : ' -translate-x-[40%] opacity-0' }`} />
+      <div className={`half-right h-full w-full bg-gray-600 opacity-70 absolute transition duration-500 left-0 top-0 ${ show ? '' : ' translate-x-[40%] opacity-0' }`} />
       <PauseButton show={showMuteToggle} />
       <audio src="/music/akuma-no-ko.mp3" id="audio" />
+      <style jsx>
+        {`
+          .half-left {
+            clip-path: polygon(0 0, 0 100%, 100% 0);
+          }
+          .half-right {
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+          }
+        `}
+      </style>
     </div>
   )
 }
