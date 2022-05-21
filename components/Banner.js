@@ -91,11 +91,11 @@ function Banner() {
           </div>
         </div>
       </h1>
-      {safari ?
+      {/* {safari ?
         <SafariPlayer />
         :
         <DefaultPlayer />
-      }
+      } */}
     </section>
   );
 }

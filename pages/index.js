@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import Audio from '../components/Audio'
 import Banner from '../components/Banner'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
       <main>
         <Banner />
+        <Audio />
       </main>
 
     </div>
