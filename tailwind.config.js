@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         'bluepastel': '#A3AAB0'
+      },
+      fontFamily: {
+        'smooch': ['Smooch', 'cursive'],
+        'macondo': ['Macondo', 'cursive'],
       }
     },
   },
