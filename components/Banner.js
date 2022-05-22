@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import LightText from './LightText'
 
 function Banner() {
+  useEffect(() => {
+  }, [])
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative text-center">
       <img
-        src="/img/afifasyafiq.webp"
-        className="absolute -z-10 left-0 top-0 w-full h-full object-cover"
-        style={{ opacity: '50%' }}
-        alt=""
+        src="/img/flower.jpg"
+        alt="flower-1"
+        className="h-[100px] object-contain absolute top-0 translate-x-4 translate-y-6 scale-150 left-0 -rotate-90"
+      />
+      <img
+        src="/img/flower.jpg"
+        alt="flower-1"
+        className="h-[100px] object-contain absolute bottom-0 scale-150 right-0 rotate-90 -translate-y-6 -translate-x-4"
       />
       <LightText className="mb-4">The wedding of</LightText>
       <h1 className="italic text-5xl opacity-80">
