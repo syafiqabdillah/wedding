@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         'smooch': ['Smooch', 'cursive'],
         'macondo': ['Macondo', 'cursive'],
+        'orbitron': ['Orbitron', 'sans-serif'],
       }
     },
   },
