@@ -39,7 +39,7 @@ function PauseButton({ show }) {
   if (audio && show)
     return (
       <div
-        className="absolute cursor-pointer top-4 right-4 bg-blue-200 rounded-full h-10 w-10 flex justify-center items-center"
+        className="absolute cursor-pointer top-4 right-6 bg-blue-200 rounded-full h-10 w-10 flex justify-center items-center"
         onClick={() => onToggleMute()}
       >
         <FontAwesomeIcon
@@ -55,6 +55,7 @@ function PauseButton({ show }) {
 function Audio() {
   const [show, setShow] = useState(true)
   const [showMuteToggle, setShowMuteToggle] = useState(false)
+  const [hide, setHide] = useState(false)
 
   function playSound() {
     let audio = document.getElementById('audio')
@@ -62,16 +63,18 @@ function Audio() {
     audio.play()
     setShow(false)
     setShowMuteToggle(true)
+    window.scrollTo(0, 0)
     setTimeout(() => {
       initializeSnow()
+      setHide(true)
     }, 1000)
   }
 
   return (
     <div
-      className={`fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
-        show ? 'bg-opacity-80' : 'bg-opacity-0'
-      }`}
+      className={`z-10 fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
+        show ? 'bg-white bg-opacity-90' : 'bg-opacity-0'
+      } ${hide && 'hidden'}`}
     >
       {show && (
         <div
@@ -79,7 +82,7 @@ function Audio() {
           onClick={playSound}
           className="bg-blue-200 hover:brightness-125 transition-all duration-300 font-macondo text-2xl cursor-pointer h-32 w-32 rounded-full flex justify-center items-center text-center z-10 opacity-100 "
         >
-          Open
+          Buka
         </div>
       )}
       <div
