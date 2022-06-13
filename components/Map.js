@@ -19,7 +19,6 @@ function Map(props) {
   return (
     <div
       className={`overflow-hidden h-[200px] md:h-[500px] rounded-xl mt-4 ${props.className}`}
-      data-aos="zoom-in"
     >
       <MapContainer
         center={location}
