@@ -43,7 +43,7 @@ function onClickNavItem(id) {
 function NavigationItem({ id, icon }) {
   return (
     <div
-      className="flex justify-center items-center cursor-pointer hover:brightness-110"
+      className="flex justify-center w-12 items-center cursor-pointer hover:brightness-110"
       onClick={() => onClickNavItem(id)}
     >
       <FontAwesomeIcon icon={icon} className="h-6 text-brownprimary" />
@@ -51,9 +51,14 @@ function NavigationItem({ id, icon }) {
   )
 }
 
-function Navigation() {
+function Navigation({ showCover }) {
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-brownsecondary flex justify-evenly sm:justify-center sm:gap-16">
+    <div
+      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-brownsecondary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+        showCover ? 'opacity-0' : 'opacity-100'
+      }`}
+      style={{ zIndex: '100000' }}
+    >
       {menus.map((item) => (
         <NavigationItem key={item.id} icon={item.icon} id={item.id} />
       ))}

@@ -3,9 +3,10 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
-function Map(props) {
-  const location = [-6.351298, 106.8312263]
+const location = [-6.351298, 106.8312263]
+const ZOOM = 13
 
+function Map(props) {
   const icon = new L.icon({
     iconUrl: '/img/location.png',
     iconRetinaUrl: '/img/location.png',
@@ -22,7 +23,7 @@ function Map(props) {
     >
       <MapContainer
         center={location}
-        zoom={15}
+        zoom={ZOOM}
         scrollWheelZoom={false}
         className={`w-full h-full z-0`}
       >

@@ -42,7 +42,7 @@ function Location() {
           onClick={onClick}
         >
           <FontAwesomeIcon icon={faLocationDot} className="inline-block h-4" />
-          Lihat di Google Maps
+          Buka di Google Maps
         </Button>
       </div>
     </Section>

@@ -44,6 +44,10 @@ const MESSAGES = [
   },
 ]
 
+function onClickKirimDoa() {
+  alert('kirim doa')
+}
+
 function Message({ id, message, sender }) {
   return (
     <div className="flex flex-col text-sm items-start gap-2 w-full">
@@ -68,7 +72,9 @@ function Messages() {
           />
         ))}
       </div>
-      <Button className="mt-4">Kirim Doa</Button>
+      <Button className="mt-4" onClick={onClickKirimDoa}>
+        Kirim Doa
+      </Button>
     </Section>
   )
 }

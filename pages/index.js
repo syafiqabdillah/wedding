@@ -75,7 +75,7 @@ export default function Home() {
           showCover={showCover}
           setShowCover={setShowCover}
         />
-        <Navigation />
+        <Navigation showCover={showCover} />
       </main>
     </div>
   )

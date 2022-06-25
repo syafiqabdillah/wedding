@@ -1,13 +1,19 @@
+import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
+import LightText from './LightText'
 
 const VOLUME = 0.6
 
 function Audio({ audio, showCover, setShowCover }) {
   const [removed, setRemoved] = useState(false)
+  const [name, setName] = useState(null)
+  const [location, setLocation] = useState(null)
+  const router = useRouter()
 
   function playSound() {
     setShowCover(false)
     window.scroll(0, 0)
+    initializeSnow()
 
     setTimeout(() => {
       setRemoved(true)
@@ -16,6 +22,14 @@ function Audio({ audio, showCover, setShowCover }) {
     }, 700)
   }
 
+  useEffect(() => {
+    const query = router.query
+    if (query.name && query.location) {
+      setName(query.name)
+      setLocation(query.location)
+    }
+  }, [router.query])
+
   return (
     <div
       className={`z-10 fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
@@ -23,13 +37,42 @@ function Audio({ audio, showCover, setShowCover }) {
       } ${removed && 'hidden'}`}
     >
       {showCover && (
-        <div
-          data-aos="fade-up"
-          onClick={() => playSound()}
-          className="bg-brownprimary text-brownbg hover:brightness-110 transition-all duration-300 font-macondo text-2xl cursor-pointer p-8 h-[200px] w-[200px] rounded-full flex justify-center items-center text-center z-10 opacity-100 "
-        >
-          Buka Undangan
-        </div>
+        <React.Fragment>
+          <div className="absolute top-[10vh] text-5xl text-center">
+            <LightText className="text-sm mb-8">
+              Welcome to The Wedding of
+            </LightText>
+            <div
+              data-aos="fade-right"
+              className="font-greatvibes tracking-wider"
+            >
+              Afifa
+            </div>
+            <div className="font-smooch">&</div>
+            <div
+              data-aos="fade-left"
+              className="font-greatvibes tracking-wider"
+            >
+              Syafiq
+            </div>
+          </div>
+          <div
+            onClick={() => playSound()}
+            className="bg-brownprimary text-brownbg hover:brightness-110 transition-all duration-300 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider"
+          >
+            Buka
+          </div>
+          {name && location && (
+            <div
+              data-aos="fade-up"
+              className="absolute bottom-[10vh] h-[150px] border w-[300px] z-10 bg-white rounded-xl flex flex-col justify-center item-center gap-4 capitalize text-center"
+            >
+              <LightText className="text-xs">Yth.</LightText>
+              <LightText className="">{name}</LightText>
+              <LightText className="">di {location}</LightText>
+            </div>
+          )}
+        </React.Fragment>
       )}
       <div
         className={`half-left h-full w-full bg-brownprimary opacity-30 absolute transition duration-1000 left-0 top-0 ${

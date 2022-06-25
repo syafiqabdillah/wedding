@@ -29,7 +29,6 @@ function Banner() {
       <LightText className="mt-4 font-extralight">
         Sabtu, 4 September 2022
       </LightText>
-      <Counter />
     </Section>
   )
 }
