@@ -2,50 +2,42 @@ import React, { useState, useEffect } from 'react'
 
 const VOLUME = 0.6
 
-function Audio() {
-  const [show, setShow] = useState(true)
-  const [showMuteToggle, setShowMuteToggle] = useState(false)
-  const [hide, setHide] = useState(false)
-
+function Audio({ audio, showCover, setShowCover }) {
   function playSound() {
-    let audio = document.getElementById('audio')
-    audio.volume = VOLUME
-    audio.play()
-    setShow(false)
-    setShowMuteToggle(true)
-    window.scrollTo(0, 0)
+    setShowCover(false)
+    window.scroll(0, 0)
     setTimeout(() => {
-      // initializeSnow()
-      setHide(true)
-    }, 1000)
+      audio.volume = VOLUME
+      audio.play()
+    }, 700)
   }
 
   return (
     <div
       className={`z-10 fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
-        show ? 'bg-white bg-opacity-90' : 'bg-opacity-0'
-      } ${hide && 'hidden'}`}
+        showCover ? 'bg-white' : 'hidden'
+      }`}
     >
-      {show && (
+      {showCover && (
         <div
           data-aos="fade-up"
-          onClick={playSound}
-          className="bg-blue-200 hover:brightness-125 transition-all duration-300 font-macondo text-2xl cursor-pointer h-32 w-32 rounded-full flex justify-center items-center text-center z-10 opacity-100 "
+          onClick={() => playSound()}
+          className="bg-brownprimary text-brownbg hover:brightness-110 transition-all duration-300 font-macondo text-2xl cursor-pointer p-8 h-[200px] w-[200px] rounded-full flex justify-center items-center text-center z-10 opacity-100 "
         >
-          Buka
+          Buka Undangan
         </div>
       )}
       <div
-        className={`half-left h-full w-full bg-gray-600 opacity-70 absolute transition duration-500 left-0 top-0 ${
-          show ? '' : ' -translate-x-[40%] opacity-0'
+        className={`half-left h-full w-full bg-brownbg opacity-30 absolute transition duration-1000 left-0 top-0 ${
+          showCover ? '' : ' -translate-x-[150%] opacity-0'
         }`}
       />
       <div
-        className={`half-right h-full w-full bg-gray-600 opacity-70 absolute transition duration-500 left-0 top-0 ${
-          show ? '' : ' translate-x-[40%] opacity-0'
+        className={`half-right h-full w-full bg-brownprimary opacity-30 duration-1000 absolute transition left-0 top-0 ${
+          showCover ? '' : ' translate-x-[150%] opacity-0'
         }`}
       />
-      <audio src="/music/akuma-no-ko.mp3" id="audio" />
+      <audio src="/music/akuma-no-ko.mp3" id="audio" loop />
       <style jsx>
         {`
           .half-left {

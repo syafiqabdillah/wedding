@@ -4,6 +4,9 @@ import dynamic from 'next/dynamic'
 
 import Section from './Section'
 import Button from './Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import Heading from './Heading'
 
 function Location() {
   const Map = useMemo(
@@ -25,18 +28,20 @@ function Location() {
   return (
     <Section id="lokasi">
       <div className="max-w-xl px-3 flex flex-col">
-        <h2 className="text-4xl font-macondo mb-4 tracking-widest uppercase">
-          Lokasi
-        </h2>
-        <LightText className="text-left font-semibold mb-2 font-macon">
+        <Heading>Lokasi Pernikahan</Heading>
+        <LightText className="text-left font-semibold text-brownprimary mb-2 font-macon">
           Felfest UI Faculty Club Universitas Indonesia
         </LightText>
-        <LightText className="text-left">
+        <LightText className="text-left text-sm tracking-wide">
           Kampus UI, Jl. Prof. DR. Miriam Budiardjo, RW.3, Srengseng Sawah, Kec.
           Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640
         </LightText>
         <Map />
-        <Button className="mt-4" onClick={onClick}>
+        <Button
+          className="mt-4 flex justify-center items-center gap-2 w-[260px] mx-auto"
+          onClick={onClick}
+        >
+          <FontAwesomeIcon icon={faLocationDot} className="inline-block h-4" />
           Lihat di Google Maps
         </Button>
       </div>

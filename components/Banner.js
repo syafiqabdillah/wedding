@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 
 import Button from './Button'
 import Counter from './Counter'
+import Details from './Details'
 import LightText from './LightText'
 import Section from './Section'
 
@@ -25,11 +26,7 @@ function Banner() {
       <LightText className="mt-4 font-extralight">
         Sabtu, 4 September 2022
       </LightText>
-
       <Counter />
-      <Button href="#lokasi" className="mt-4">
-        Lihat Lokasi
-      </Button>
     </Section>
   )
 }

@@ -1,15 +1,19 @@
-import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 import Audio from '../components/Audio'
 import Background from '../components/Background'
 import Banner from '../components/Banner'
+import Details from '../components/Details'
 import Location from '../components/Location'
 import PauseButton from '../components/PauseButton'
+import Gallery from '../components/Gallery'
+import Messages from '../components/Messages'
 
 export default function Home() {
   const [audio, setAudio] = useState(null)
   const [mute, setMute] = useState(false)
+  const [showCover, setShowCover] = useState(true)
 
   useEffect(() => {
     setAudio(document.getElementById('audio'))
@@ -53,14 +57,23 @@ export default function Home() {
       <main className="relative flex flex-col">
         <Background />
         <Banner />
-        <Audio />
+        <Details />
+        <Location />
+        <Gallery />
+        <Messages />
         <PauseButton
           audio={audio}
           mute={mute}
-          show={true}
+          showCover={showCover}
+          setShowCover={setShowCover}
           onToggleMute={onToggleMute}
         />
-        <Location />
+        <Audio
+          audio={audio}
+          mute={mute}
+          showCover={showCover}
+          setShowCover={setShowCover}
+        />
       </main>
     </div>
   )

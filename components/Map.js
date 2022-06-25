@@ -18,7 +18,7 @@ function Map(props) {
   })
   return (
     <div
-      className={`overflow-hidden h-[200px] md:h-[500px] rounded-xl mt-4 ${props.className}`}
+      className={`overflow-hidden h-[40vh] md:h-[50vh] mt-4 ${props.className}`}
     >
       <MapContainer
         center={location}
@@ -30,11 +30,7 @@ function Map(props) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker
-          icon={icon}
-          position={location}
-          onClick={() => console.log('yaho')}
-        />
+        <Marker icon={icon} position={location} />
       </MapContainer>
     </div>
   )
