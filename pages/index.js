@@ -9,6 +9,7 @@ import Location from '../components/Location'
 import PauseButton from '../components/PauseButton'
 import Gallery from '../components/Gallery'
 import Messages from '../components/Messages'
+import Navigation from '../components/Navigation'
 
 export default function Home() {
   const [audio, setAudio] = useState(null)
@@ -74,6 +75,7 @@ export default function Home() {
           showCover={showCover}
           setShowCover={setShowCover}
         />
+        <Navigation />
       </main>
     </div>
   )

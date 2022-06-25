@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react'
-import LightText from './LightText'
 import dynamic from 'next/dynamic'
-
-import Section from './Section'
-import Button from './Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+
+import LightText from './LightText'
+import Section from './Section'
+import Button from './Button'
 import Heading from './Heading'
 
 function Location() {
@@ -28,11 +28,11 @@ function Location() {
   return (
     <Section id="lokasi">
       <div className="max-w-xl px-3 flex flex-col">
-        <Heading>Lokasi Pernikahan</Heading>
-        <LightText className="text-left font-semibold text-brownprimary mb-2 font-macon">
+        <Heading>Lokasi</Heading>
+        <LightText className="text-left font-semibold text-brownprimary mt-2 mb-2 font-macon">
           Felfest UI Faculty Club Universitas Indonesia
         </LightText>
-        <LightText className="text-left text-sm tracking-wide">
+        <LightText className="text-left text-xs tracking-wide">
           Kampus UI, Jl. Prof. DR. Miriam Budiardjo, RW.3, Srengseng Sawah, Kec.
           Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640
         </LightText>

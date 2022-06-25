@@ -1,37 +1,46 @@
 import React from 'react'
+import ImageGallery from 'react-image-gallery'
 
 import Heading from './Heading'
 import Section from './Section'
 
-const IMG_SIZE = '150px'
+const IMAGE_CLASS = 'h-[57vh] w-full'
 
-function Image({ src }) {
-  return (
-    <div
-      className={`h-40 w-40 bg-blue-200 border border-lg border-brownaccend`}
-    >
-      <img src={src} className="object-cover w-full h-full" />
-    </div>
-  )
-}
+const IMAGES = [
+  {
+    original: '/img/afifa.jpg',
+    thumbnail: '/img/afifa.jpg',
+    originalClass: IMAGE_CLASS,
+  },
+  {
+    original: '/img/afifa.jpg',
+    thumbnail: '/img/afifa.jpg',
+    originalClass: IMAGE_CLASS,
+  },
+  {
+    original: '/img/afifa.jpg',
+    thumbnail: '/img/afifa.jpg',
+    originalClass: IMAGE_CLASS,
+  },
+  {
+    original: '/img/afifa.jpg',
+    thumbnail: '/img/afifa.jpg',
+    originalClass: IMAGE_CLASS,
+  },
+]
 
 function Gallery() {
   return (
-    <Section>
-      <Heading>Galeri Pernikahan</Heading>
-      <div className="max-w-xl max-h-[60vh] overflow-y-auto flex flex-wrap gap-2 justify-center">
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
-        <Image src="/img/afifa.jpg" />
+    <Section id="galeri">
+      <Heading>Galeri</Heading>
+      <div className="max-w-xs">
+        <ImageGallery
+          items={IMAGES}
+          autoPlay={true}
+          infinite={true}
+          lazyLoad={true}
+          slideInterval={5000}
+        />
       </div>
     </Section>
   )

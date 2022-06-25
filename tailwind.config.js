@@ -16,6 +16,7 @@ module.exports = {
         smooch: ['Smooch', 'cursive'],
         macondo: ['Macondo', 'cursive'],
         orbitron: ['Orbitron', 'sans-serif'],
+        greatvibes: ['Great Vibes', 'cursive'],
       },
     },
   },

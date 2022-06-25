@@ -20,13 +20,17 @@
     "react": "18.1.0",
     "react-audio-player": "^0.17.0",
     "react-dom": "18.1.0",
+    "react-image-gallery": "^1.2.8",
     "react-leaflet": "^4.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "10.4.5",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.0.24"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
   }
 }

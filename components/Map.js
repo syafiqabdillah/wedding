@@ -23,7 +23,7 @@ function Map(props) {
       <MapContainer
         center={location}
         zoom={15}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
         className={`w-full h-full z-0`}
       >
         <TileLayer

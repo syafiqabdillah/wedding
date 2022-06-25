@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react'
 const VOLUME = 0.6
 
 function Audio({ audio, showCover, setShowCover }) {
+  const [removed, setRemoved] = useState(false)
+
   function playSound() {
     setShowCover(false)
     window.scroll(0, 0)
+
     setTimeout(() => {
+      setRemoved(true)
       audio.volume = VOLUME
       audio.play()
     }, 700)
@@ -15,8 +19,8 @@ function Audio({ audio, showCover, setShowCover }) {
   return (
     <div
       className={`z-10 fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
-        showCover ? 'bg-white' : 'hidden'
-      }`}
+        showCover ? 'bg-white' : 'opacity-0'
+      } ${removed && 'hidden'}`}
     >
       {showCover && (
         <div
@@ -28,7 +32,7 @@ function Audio({ audio, showCover, setShowCover }) {
         </div>
       )}
       <div
-        className={`half-left h-full w-full bg-brownbg opacity-30 absolute transition duration-1000 left-0 top-0 ${
+        className={`half-left h-full w-full bg-brownprimary opacity-30 absolute transition duration-1000 left-0 top-0 ${
           showCover ? '' : ' -translate-x-[150%] opacity-0'
         }`}
       />
