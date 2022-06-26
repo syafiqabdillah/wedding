@@ -7,9 +7,9 @@ module.exports = {
     extend: {
       colors: {
         bluepastel: '#A3AAB0',
-        brownprimary: '#DAB88B',
-        brownsecondary: '#F3E9DD',
-        brownbg: '#FDF6EC',
+        themeprimary: '#DAB88B',
+        themesecondary: '#F3E9DD',
+        themebg: '#FDF6EC',
         brownaccend: '#B7CADB',
       },
       fontFamily: {

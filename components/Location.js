@@ -29,7 +29,7 @@ function Location() {
     <Section id="lokasi">
       <div className="max-w-xl px-3 flex flex-col">
         <Heading>Lokasi</Heading>
-        <LightText className="text-left font-semibold text-brownprimary mt-2 mb-2 font-macon">
+        <LightText className="text-left font-semibold text-themeprimary mt-2 mb-2 font-macon">
           Felfest UI Faculty Club Universitas Indonesia
         </LightText>
         <LightText className="text-left text-xs tracking-wide">

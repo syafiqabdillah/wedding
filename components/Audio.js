@@ -58,9 +58,9 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-brownprimary text-brownbg hover:brightness-110 transition-all duration-300 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider"
+            className="bg-themeprimary text-themebg hover:brightness-110 transition-all duration-300 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider"
           >
-            Buka
+            Buka Undangan
           </div>
           {name && location && (
             <div
@@ -75,12 +75,12 @@ function Audio({ audio, showCover, setShowCover }) {
         </React.Fragment>
       )}
       <div
-        className={`half-left h-full w-full bg-brownprimary opacity-30 absolute transition duration-1000 left-0 top-0 ${
+        className={`half-left h-full w-full bg-themeprimary opacity-30 absolute transition duration-1000 left-0 top-0 ${
           showCover ? '' : ' -translate-x-[150%] opacity-0'
         }`}
       />
       <div
-        className={`half-right h-full w-full bg-brownprimary opacity-30 duration-1000 absolute transition left-0 top-0 ${
+        className={`half-right h-full w-full bg-themeprimary opacity-30 duration-1000 absolute transition left-0 top-0 ${
           showCover ? '' : ' translate-x-[150%] opacity-0'
         }`}
       />

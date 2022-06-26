@@ -46,7 +46,7 @@ function NavigationItem({ id, icon }) {
       className="flex justify-center w-12 items-center cursor-pointer hover:brightness-110"
       onClick={() => onClickNavItem(id)}
     >
-      <FontAwesomeIcon icon={icon} className="h-6 text-brownprimary" />
+      <FontAwesomeIcon icon={icon} className="h-6 text-themeprimary" />
     </div>
   )
 }
@@ -54,7 +54,7 @@ function NavigationItem({ id, icon }) {
 function Navigation({ showCover }) {
   return (
     <div
-      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-brownsecondary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-themesecondary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
         showCover ? 'opacity-0' : 'opacity-100'
       }`}
       style={{ zIndex: '100000' }}

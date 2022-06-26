@@ -41,7 +41,7 @@ function Details() {
         ibu="John Doe"
         className={'mt-8'}
       />
-      <hr className="border my-8 w-[300px] border-brownsecondary" />
+      <hr className="border my-8 w-[300px] border-themesecondary" />
       <Event name="Akad" time="Sabtu, 4 September 2022 08.00 WIB" />
       <Event
         name="Resepsi"

@@ -52,7 +52,7 @@ function Message({ id, message, sender }) {
   return (
     <div className="flex flex-col text-sm items-start gap-2 w-full">
       <LightText className="text-justify text-gray-500">{message}</LightText>
-      <LightText className="text-right ml-auto text-brownprimary">
+      <LightText className="text-right ml-auto text-themeprimary">
         {sender}
       </LightText>
     </div>
@@ -63,7 +63,7 @@ function Messages() {
   return (
     <Section id="doa">
       <Heading>Doa dan Pesan</Heading>
-      <div className="w-full border rounded-xl overflow-y-auto border-brownsecondary h-[45vh] max-w-xl mx-auto flex flex-col gap-6 items-start p-4">
+      <div className="w-full border rounded-xl overflow-y-auto border-themesecondary h-[45vh] max-w-xl mx-auto flex flex-col gap-6 items-start p-4">
         {MESSAGES.map((message) => (
           <Message
             key={message.id}

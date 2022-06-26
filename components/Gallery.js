@@ -4,36 +4,30 @@ import ImageGallery from 'react-image-gallery'
 import Heading from './Heading'
 import Section from './Section'
 
-const IMAGE_CLASS = 'h-[57vh] w-full'
+const THUMBNAIL_CLASS = 'h-[100px] w-[100px] cover overflow-hidden'
+
+function getImageData(src) {
+  return {
+    original: src,
+    thumbnail: src,
+    thumbnailClass: THUMBNAIL_CLASS,
+  }
+}
 
 const IMAGES = [
-  {
-    original: '/img/afifa.jpg',
-    thumbnail: '/img/afifa.jpg',
-    originalClass: IMAGE_CLASS,
-  },
-  {
-    original: '/img/afifa.jpg',
-    thumbnail: '/img/afifa.jpg',
-    originalClass: IMAGE_CLASS,
-  },
-  {
-    original: '/img/afifa.jpg',
-    thumbnail: '/img/afifa.jpg',
-    originalClass: IMAGE_CLASS,
-  },
-  {
-    original: '/img/afifa.jpg',
-    thumbnail: '/img/afifa.jpg',
-    originalClass: IMAGE_CLASS,
-  },
+  getImageData('/img/afifa.jpg'),
+  getImageData('/img/afifa.jpg'),
+  getImageData('/img/afifa.jpg'),
+  getImageData('/img/afifa.jpg'),
+  getImageData('/img/afifa.jpg'),
+  getImageData('/img/afifa.jpg'),
 ]
 
 function Gallery() {
   return (
     <Section id="galeri">
       <Heading>Galeri</Heading>
-      <div className="max-w-xs">
+      <div className="max-w-[300px]">
         <ImageGallery
           items={IMAGES}
           autoPlay={true}
