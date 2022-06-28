@@ -70,6 +70,7 @@ function Audio({ audio, showCover, setShowCover }) {
             </div>
           </div>
           <div
+            data-aos="zoom-in"
             onClick={() => playSound()}
             className="bg-themesecondary text-white hover:brightness-110 hover:-rotate-45 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
           >

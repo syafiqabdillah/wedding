@@ -66,8 +66,8 @@ function Message({ id, message, sender }) {
 function Messages() {
   return (
     <Section id="doa">
-      <Heading>Doa dan Pesan</Heading>
-      <div className="w-full border rounded-xl overflow-y-auto border-themesecondary h-[45vh] max-w-xl mx-auto flex flex-col gap-6 items-start p-4">
+      <Heading>Pesan</Heading>
+      <div className="w-full rounded-xl overflow-y-auto border-themesecondary h-[45vh] max-w-xl mx-auto flex flex-col gap-6 items-start p-4">
         {MESSAGES.map((message) => (
           <Message
             key={message.id}
@@ -77,7 +77,7 @@ function Messages() {
         ))}
       </div>
       <Button className="mt-4" onClick={onClickKirimDoa}>
-        Kirim Doa
+        Kirim Pesan
       </Button>
     </Section>
   )

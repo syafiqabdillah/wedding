@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     AOS.init({
       offset: 200,
       delay: 200,
+      mirror: true,
     })
   })
   return <Component {...pageProps} />
