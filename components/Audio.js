@@ -27,18 +27,21 @@ function Audio({ audio, showCover, setShowCover }) {
     if (query.name && query.location) {
       setName(query.name)
       setLocation(query.location)
+    } else {
+      setName('kamu')
+      setLocation('manapun kau berada')
     }
   }, [router.query])
 
   return (
     <div
-      className={`z-10 fixed h-screen w-screen top-0 left-0 flex justify-center transition-all duration-1000 items-center ${
+      className={`z-10 fixed h-screen w-screen top-0 left-0 flex flex-col gap-6 justify-center transition-all duration-1000 items-center ${
         showCover ? 'bg-white' : 'opacity-0'
       } ${removed && 'hidden'}`}
     >
       {showCover && (
         <React.Fragment>
-          <div className="absolute top-[10vh] text-5xl text-center">
+          <div className="text-5xl text-center">
             <LightText className="text-sm mb-8">
               Welcome to The Wedding of
             </LightText>
@@ -58,20 +61,20 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-themeprimary text-themebg hover:brightness-110 transition-all duration-300 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider"
+            className="bg-themeprimary text-themebg hover:brightness-110 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider hover:scale-110"
           >
             Buka Undangan
           </div>
-          {name && location && (
-            <div
-              data-aos="fade-up"
-              className="absolute bottom-[10vh] h-[150px] border w-[300px] z-10 bg-white rounded-xl flex flex-col justify-center item-center gap-4 capitalize text-center"
-            >
-              <LightText className="text-xs">Yth.</LightText>
-              <LightText className="">{name}</LightText>
-              <LightText className="">di {location}</LightText>
-            </div>
-          )}
+          <div
+            data-aos="fade-up"
+            className="h-[150px] border w-[300px] z-10 bg-white rounded-xl flex flex-col justify-center item-center gap-4  text-center"
+          >
+            <LightText className="text-xs">Yth.</LightText>
+            <LightText className="capitalize">{name}</LightText>
+            <LightText className="">
+              di <span className="capitalize">{location}</span>
+            </LightText>
+          </div>
         </React.Fragment>
       )}
       <div

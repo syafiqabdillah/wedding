@@ -38,7 +38,7 @@ function Counter() {
   }
 
   return (
-    <div className="font-orbitron bg-themebg text-themeprimary rounded p-4 mt-4 flex justify-between gap-2 items-center text-2xl">
+    <div className="font-orbitron bg-themeprimary text-themebg tracking-wider rounded p-4 mt-4 flex justify-between gap-2 items-center text-2xl">
       {/* {diff} */}
       <Item>{getCoundown('days')}</Item>
       <Divider />

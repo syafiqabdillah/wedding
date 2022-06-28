@@ -14,22 +14,27 @@ const menus = [
   {
     icon: faHome,
     id: 'home',
+    label: 'Home',
   },
   {
     icon: faHandshake,
     id: 'acara',
+    label: 'Acara',
   },
   {
     icon: faLocationDot,
     id: 'lokasi',
+    label: 'Lokasi',
   },
   {
     icon: faImages,
     id: 'galeri',
+    label: 'Galeri',
   },
   {
     icon: faCommentDots,
     id: 'doa',
+    label: 'Pesan',
   },
 ]
 
@@ -40,13 +45,14 @@ function onClickNavItem(id) {
   } catch (err) {}
 }
 
-function NavigationItem({ id, icon }) {
+function NavigationItem({ id, icon, label = '' }) {
   return (
     <div
-      className="flex justify-center w-12 items-center cursor-pointer hover:brightness-110"
+      className="flex justify-center w-12 items-center cursor-pointer hover:brightness-110 flex-col gap-1"
       onClick={() => onClickNavItem(id)}
     >
-      <FontAwesomeIcon icon={icon} className="h-6 text-themeprimary" />
+      <FontAwesomeIcon icon={icon} className="h-4 text-themesecondary" />
+      <p className="text-themesecondary text-xs">{label}</p>
     </div>
   )
 }
@@ -54,13 +60,18 @@ function NavigationItem({ id, icon }) {
 function Navigation({ showCover }) {
   return (
     <div
-      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-themesecondary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-themeprimary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
         showCover ? 'opacity-0' : 'opacity-100'
       }`}
       style={{ zIndex: '100000' }}
     >
       {menus.map((item) => (
-        <NavigationItem key={item.id} icon={item.icon} id={item.id} />
+        <NavigationItem
+          key={item.id}
+          icon={item.icon}
+          id={item.id}
+          label={item.label}
+        />
       ))}
     </div>
   )

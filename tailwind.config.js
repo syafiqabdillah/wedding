@@ -6,11 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bluepastel: '#A3AAB0',
-        themeprimary: '#DAB88B',
-        themesecondary: '#F3E9DD',
-        themebg: '#FDF6EC',
-        brownaccend: '#B7CADB',
+        themeprimary: '#243A73',
+        themesecondary: '#A5BECC',
+        themebg: '#F2EBE9',
       },
       fontFamily: {
         smooch: ['Smooch', 'cursive'],
