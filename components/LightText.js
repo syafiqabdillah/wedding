@@ -2,7 +2,9 @@ import React from 'react'
 
 function LightText(props) {
   return (
-    <p className={`font-extralight ` + props.className}>{props.children}</p>
+    <p className={`font-extralight text-themetext ` + props.className}>
+      {props.children}
+    </p>
   )
 }
 

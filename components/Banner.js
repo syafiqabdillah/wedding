@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Button from './Button'
 import Counter from './Counter'
@@ -7,7 +7,16 @@ import LightText from './LightText'
 import Section from './Section'
 
 function Banner() {
-  useEffect(() => {}, [])
+  const [current, setCurrent] = useState('afifa')
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((c) => {
+        if (c == 'afifa') return 'syafiq'
+        return 'afifa'
+      })
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <Section
@@ -16,12 +25,24 @@ function Banner() {
     >
       <LightText className="mb-4">The wedding of</LightText>
       <h1 className="italic text-6xl opacity-80">
-        <div className="w-[130px] flex flex-col items-center gap-3 justify-center">
-          <div data-aos="fade-right" className="font-greatvibes tracking-wider">
+        <div className="w-[130px] flex flex-col items-center gap-3 justify-center text-themetext ">
+          <div
+            className={`font-greatvibes tracking-wider transition duration-500 hover:-translate-x-3 ${
+              current == 'afifa'
+                ? 'text-themetext'
+                : 'text-themeprimary -translate-x-3'
+            }`}
+          >
             Afifa
           </div>
           <div className="font-smooch">&</div>
-          <div data-aos="fade-left" className="font-greatvibes tracking-wider">
+          <div
+            className={`font-greatvibes tracking-wider transition duration-500 hover:translate-x-3 ${
+              current == 'afifa'
+                ? 'text-themeprimary'
+                : 'text-themetext translate-x-3'
+            }`}
+          >
             Syafiq
           </div>
         </div>

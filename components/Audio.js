@@ -41,7 +41,7 @@ function Audio({ audio, showCover, setShowCover }) {
     >
       {showCover && (
         <React.Fragment>
-          <div className="text-5xl text-center">
+          <div className="text-6xl text-center text-themetext">
             <LightText className="text-sm mb-8">
               Welcome to The Wedding of
             </LightText>
@@ -61,13 +61,13 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-themeprimary text-themebg hover:brightness-110 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-wider hover:scale-110"
+            className="bg-themeprimary text-white hover:brightness-110 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
           >
             Buka Undangan
           </div>
           <div
             data-aos="fade-up"
-            className="h-[150px] border w-[300px] z-10 bg-white rounded-xl flex flex-col justify-center item-center gap-4  text-center"
+            className="h-[150px] border w-[300px] z-10 bg-white border-themeprimary rounded-xl flex flex-col justify-center item-center gap-4 text-center"
           >
             <LightText className="text-xs">Yth.</LightText>
             <LightText className="capitalize">{name}</LightText>
@@ -78,12 +78,12 @@ function Audio({ audio, showCover, setShowCover }) {
         </React.Fragment>
       )}
       <div
-        className={`half-left h-full w-full bg-themeprimary opacity-30 absolute transition duration-1000 left-0 top-0 ${
+        className={`half-left h-full w-full bg-white opacity-30 absolute transition duration-1000 left-0 top-0 ${
           showCover ? '' : ' -translate-x-[150%] opacity-0'
         }`}
       />
       <div
-        className={`half-right h-full w-full bg-themeprimary opacity-30 duration-1000 absolute transition left-0 top-0 ${
+        className={`half-right h-full w-full bg-white opacity-30 duration-1000 absolute transition left-0 top-0 ${
           showCover ? '' : ' translate-x-[150%] opacity-0'
         }`}
       />

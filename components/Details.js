@@ -6,7 +6,7 @@ import Section from './Section'
 
 function Mempelai({ nama, ayah, ibu, tipe, className }) {
   return (
-    <div className={`flex flex-col ${className}`}>
+    <div data-aos="fade-up" className={`flex flex-col ${className}`}>
       <div className="font-greatvibes text-3xl">{nama}</div>
       <LightText className="text-xs my-2">{tipe} dari</LightText>
       <LightText className="text-sm">
@@ -16,9 +16,9 @@ function Mempelai({ nama, ayah, ibu, tipe, className }) {
   )
 }
 
-function Event({ name, time, className }) {
+function Event({ name, time, className, aos }) {
   return (
-    <div className={`flex flex-col gap-2 ${className}`}>
+    <div data-aos={aos} className={`flex flex-col gap-2 ${className}`}>
       <div className="text-2xl font-greatvibes">{name}</div>
       <LightText className="text-sm">{time}</LightText>
     </div>
@@ -41,10 +41,15 @@ function Details() {
         ibu="John Doe"
         className={'mt-8'}
       />
-      <hr className="border my-8 w-[300px] border-themesecondary" />
-      <Event name="Akad" time="Sabtu, 4 September 2022 08.00 WIB" />
+      <hr className="border my-8 w-[300px] border-themeprimary" />
+      <Event
+        name="Akad"
+        aos="flip-right"
+        time="Sabtu, 4 September 2022 08.00 WIB"
+      />
       <Event
         name="Resepsi"
+        aos="flip-left"
         time="Sabtu, 4 September 2022 10.00 WIB"
         className="my-4"
       />

@@ -7,10 +7,8 @@ import 'aos/dist/aos.css'
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50,
-      delay: 50,
+      offset: 200,
+      delay: 200,
     })
   })
   return <Component {...pageProps} />

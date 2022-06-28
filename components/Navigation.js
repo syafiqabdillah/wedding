@@ -48,11 +48,11 @@ function onClickNavItem(id) {
 function NavigationItem({ id, icon, label = '' }) {
   return (
     <div
-      className="flex justify-center w-12 items-center cursor-pointer hover:brightness-110 flex-col gap-1"
+      className="flex justify-center w-12 items-center text-themeprimary cursor-pointer hover:brightness-110 flex-col gap-1"
       onClick={() => onClickNavItem(id)}
     >
-      <FontAwesomeIcon icon={icon} className="h-4 text-themesecondary" />
-      <p className="text-themesecondary text-xs">{label}</p>
+      <FontAwesomeIcon icon={icon} className="h-6" />
+      <p className="text-xs">{label}</p>
     </div>
   )
 }
@@ -60,7 +60,7 @@ function NavigationItem({ id, icon, label = '' }) {
 function Navigation({ showCover }) {
   return (
     <div
-      className={`z-100 fixed bottom-0 left-0 w-full h-16 bg-themeprimary flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+      className={`z-100 fixed bottom-0 left-0 w-full h-20 bg-white shadow flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
         showCover ? 'opacity-0' : 'opacity-100'
       }`}
       style={{ zIndex: '100000' }}
