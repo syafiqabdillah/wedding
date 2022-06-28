@@ -41,7 +41,10 @@ function Details() {
         ibu="John Doe"
         className={'mt-8'}
       />
-      <hr className="border my-8 w-[300px] border-themeprimary" />
+      <hr
+        data-aos="zoom-in"
+        className="border my-8 w-[300px] border-themeprimary"
+      />
       <Event
         name="Akad"
         aos="flip-right"

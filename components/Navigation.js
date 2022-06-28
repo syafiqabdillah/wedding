@@ -9,6 +9,7 @@ import {
   faLocationDot,
   faRing,
 } from '@fortawesome/free-solid-svg-icons'
+import LightText from './LightText'
 
 const menus = [
   {
@@ -52,7 +53,7 @@ function NavigationItem({ id, icon, label = '' }) {
       onClick={() => onClickNavItem(id)}
     >
       <FontAwesomeIcon icon={icon} className="h-6" />
-      <p className="text-xs">{label}</p>
+      <LightText className="text-xs text-themeprimary">{label}</LightText>
     </div>
   )
 }

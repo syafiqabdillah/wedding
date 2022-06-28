@@ -35,14 +35,24 @@ function Audio({ audio, showCover, setShowCover }) {
 
   return (
     <div
-      className={`z-10 fixed h-screen w-screen top-0 left-0 flex flex-col gap-6 justify-center transition-all duration-1000 items-center ${
+      className={`z-10 fixed h-screen w-screen top-0 left-0 flex flex-col gap-8 justify-center transition-all duration-1000 items-center ${
         showCover ? 'bg-white' : 'opacity-0'
       } ${removed && 'hidden'}`}
     >
+      <div
+        className={`-z-10 half-left h-full w-full bg-themeprimary absolute transition duration-1000 left-0 top-0 ${
+          showCover ? '' : ' -translate-x-[150%] opacity-0'
+        }`}
+      />
+      <div
+        className={`-z-10 half-right h-full w-full bg-themeprimary duration-1000 absolute transition left-0 top-0 ${
+          showCover ? '' : ' translate-x-[150%] opacity-0'
+        }`}
+      />
       {showCover && (
         <React.Fragment>
-          <div className="text-6xl text-center text-themetext">
-            <LightText className="text-sm mb-8">
+          <div className="text-5xl text-center text-white">
+            <LightText className="text-sm mb-8 text-white">
               Welcome to The Wedding of
             </LightText>
             <div
@@ -51,7 +61,7 @@ function Audio({ audio, showCover, setShowCover }) {
             >
               Afifa
             </div>
-            <div className="font-smooch">&</div>
+            <div className="font-smooch text-md my-2">&</div>
             <div
               data-aos="fade-left"
               className="font-greatvibes tracking-wider"
@@ -61,13 +71,13 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-themeprimary text-white hover:brightness-110 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
+            className="bg-themesecondary text-white hover:brightness-110 hover:-rotate-45 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[150px] w-[150px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
           >
             Buka Undangan
           </div>
           <div
             data-aos="fade-up"
-            className="h-[150px] border w-[300px] z-10 bg-white border-themeprimary rounded-xl flex flex-col justify-center item-center gap-4 text-center"
+            className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary border-themebg rounded-xl flex flex-col justify-center item-center gap-4 text-center"
           >
             <LightText className="text-xs">Yth.</LightText>
             <LightText className="capitalize">{name}</LightText>
@@ -77,16 +87,7 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
         </React.Fragment>
       )}
-      <div
-        className={`half-left h-full w-full bg-white opacity-30 absolute transition duration-1000 left-0 top-0 ${
-          showCover ? '' : ' -translate-x-[150%] opacity-0'
-        }`}
-      />
-      <div
-        className={`half-right h-full w-full bg-white opacity-30 duration-1000 absolute transition left-0 top-0 ${
-          showCover ? '' : ' translate-x-[150%] opacity-0'
-        }`}
-      />
+
       <audio src="/music/akuma-no-ko.mp3" id="audio" loop />
       <style jsx>
         {`

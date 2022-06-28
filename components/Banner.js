@@ -7,17 +7,6 @@ import LightText from './LightText'
 import Section from './Section'
 
 function Banner() {
-  const [current, setCurrent] = useState('afifa')
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((c) => {
-        if (c == 'afifa') return 'syafiq'
-        return 'afifa'
-      })
-    }, 1000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <Section
       id="home"
@@ -25,23 +14,15 @@ function Banner() {
     >
       <LightText className="mb-4">The wedding of</LightText>
       <h1 className="italic text-6xl opacity-80">
-        <div className="w-[130px] flex flex-col items-center gap-3 justify-center text-themetext ">
+        <div className="w-[130px] flex flex-col items-center gap-3 justify-center text-themeprimary ">
           <div
-            className={`font-greatvibes tracking-wider transition duration-500 hover:-translate-x-3 ${
-              current == 'afifa'
-                ? 'text-themetext'
-                : 'text-themeprimary -translate-x-3'
-            }`}
+            className={`font-greatvibes tracking-wider transition duration-500 hover:-translate-x-3 `}
           >
             Afifa
           </div>
           <div className="font-smooch">&</div>
           <div
-            className={`font-greatvibes tracking-wider transition duration-500 hover:translate-x-3 ${
-              current == 'afifa'
-                ? 'text-themeprimary'
-                : 'text-themetext translate-x-3'
-            }`}
+            className={`font-greatvibes tracking-wider transition duration-500 hover:translate-x-3 `}
           >
             Syafiq
           </div>

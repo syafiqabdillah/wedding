@@ -50,7 +50,11 @@ function onClickKirimDoa() {
 
 function Message({ id, message, sender }) {
   return (
-    <div className="flex flex-col text-sm items-start gap-2 w-full">
+    <div
+      className="flex flex-col text-sm items-start gap-2 w-full"
+      data-aos="fade-left"
+      data-aos-offset="0"
+    >
       <LightText className="text-justify text-gray-500">{message}</LightText>
       <LightText className="text-right ml-auto text-themeprimary">
         {sender}

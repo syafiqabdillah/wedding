@@ -26,8 +26,7 @@ const IMAGES = [
 function Gallery() {
   return (
     <Section id="galeri">
-      <Heading>Galeri</Heading>
-      <div className="max-w-[300px]">
+      <div className="max-w-[300px]" data-aos="fade-up">
         <ImageGallery
           items={IMAGES}
           autoPlay={true}
