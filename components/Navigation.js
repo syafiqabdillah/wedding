@@ -40,7 +40,6 @@ const menus = [
 ]
 
 function onClickNavItem(id) {
-  console.log('to', id)
   try {
     document.getElementById(id).scrollIntoView()
   } catch (err) {}

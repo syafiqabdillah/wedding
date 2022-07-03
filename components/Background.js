@@ -13,7 +13,7 @@ function Background() {
       <img
         src="/img/flower.jpg"
         alt="flower-1"
-        className="h-[120px] bottom-16 -right-3 md:h-[150px] md:bottom-3 object-contain absolute rotate-90 -z-10"
+        className="h-[120px] bottom-20 -right-3 md:h-[150px] object-contain absolute rotate-90 -z-10"
       />
     </div>
   )
