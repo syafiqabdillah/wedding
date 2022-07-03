@@ -16,7 +16,9 @@ function Message({ message, sender }) {
       data-aos="fade-left"
       data-aos-offset="0"
     >
-      <LightText className="text-justify text-gray-500">"{message}"</LightText>
+      <LightText className="text-justify text-gray-500">
+        &ldquo;{message}&rdquo;
+      </LightText>
       <LightText className="text-right ml-auto text-themeprimary">
         {sender}
       </LightText>
