@@ -13,7 +13,7 @@ function Audio({ audio, showCover, setShowCover }) {
   function playSound() {
     setShowCover(false)
     window.scroll(0, 0)
-    initializeSnow()
+    // initializeSnow()
 
     setTimeout(() => {
       setRemoved(true)
