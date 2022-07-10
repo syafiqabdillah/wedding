@@ -11,6 +11,8 @@ function getImageData(src) {
     original: `/img/prewed/${src}`,
     thumbnail: `/img/prewed/${src}`,
     thumbnailClass: THUMBNAIL_CLASS,
+    loading: 'lazy',
+    thumbnailLoading: 'lazy',
   }
 }
 
