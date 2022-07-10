@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,6 +50,10 @@ function Form({ setShowForm }) {
     }
   }
 
+  useEffect(() => {
+    document.getElementById('input-sender').focus()
+  }, [])
+
   return (
     <div className=" w-full max-w-xl mx-auto p-3">
       <form className="flex flex-col items-start text-left gap-6">
@@ -57,16 +61,17 @@ function Form({ setShowForm }) {
           <LightText>Dari</LightText>
           <input
             type="text"
-            className="border-2 rounded-lg focus:outline-none focus:border-themesecondary text-sm font-extralight text-themetext px-2 py-1 w-full"
+            className="border-2 focus:outline-none focus:border-themeprimary text-sm font-extralight text-themetext px-2 py-2 w-full"
             value={sender}
             onChange={(e) => setSender(e.target.value)}
             disabled={loading}
+            id="input-sender"
           />
         </div>
         <div className="flex flex-col gap-2 items-start w-full">
           <LightText>Pesan</LightText>
           <textarea
-            className="border-2 rounded-lg focus:border-themesecondary text-sm font-extralight text-themetext focus:outline-none px-2 py-1 w-full"
+            className="border-2 focus:border-themeprimary text-sm font-extralight text-themetext focus:outline-none px-2 py-1 w-full"
             value={text}
             rows={4}
             onChange={(e) => setText(e.target.value)}

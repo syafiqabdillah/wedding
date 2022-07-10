@@ -37,7 +37,7 @@ function Location() {
         </LightText>
         <Map />
         <Button
-          className="mt-4 flex justify-center items-center gap-2 w-[220px] mx-auto"
+          className="mt-8 flex justify-center items-center gap-2 w-full mx-auto"
           onClick={onClick}
         >
           <FontAwesomeIcon icon={faLocationDot} className="inline-block h-4" />

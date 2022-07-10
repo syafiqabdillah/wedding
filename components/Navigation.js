@@ -60,7 +60,7 @@ function NavigationItem({ id, icon, label = '' }) {
 function Navigation({ showCover }) {
   return (
     <div
-      className={`z-100 fixed bottom-0 left-0 w-full h-20 bg-white shadow flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+      className={`z-100 fixed bottom-0 left-0 w-full h-20 bg-paper border-t flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
         showCover ? 'opacity-0' : 'opacity-100'
       }`}
       style={{ zIndex: '100000' }}

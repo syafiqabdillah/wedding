@@ -48,7 +48,7 @@ const IMAGES = FILE_NAMES.map((file) => getImageData(file))
 function Gallery() {
   return (
     <Section id="galeri">
-      <div className="max-w-[300px]" data-aos="fade-up">
+      <div className="max-w-[300px]" data-aos="zoom-in">
         <ImageGallery
           items={IMAGES}
           autoPlay={true}

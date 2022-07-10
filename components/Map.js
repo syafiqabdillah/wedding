@@ -19,7 +19,7 @@ function Map(props) {
   })
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-in"
       className={`overflow-hidden h-[40vh] md:h-[50vh] mt-4 ${props.className}`}
     >
       <MapContainer

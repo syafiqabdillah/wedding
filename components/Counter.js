@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 function Item(props) {
-  return <div className="w-8 text-sm font-bold">{props.children}</div>
+  return <div className="w-10 text-sm font-bold">{props.children}</div>
 }
 
 function Divider(props) {
@@ -9,7 +9,6 @@ function Divider(props) {
 }
 
 function Counter() {
-  const [now, setNow] = useState(null)
   const [diff, setDiff] = useState(0)
   const [nowInterval, setNowInterval] = useState(null)
 
@@ -23,29 +22,32 @@ function Counter() {
   }, [])
 
   function getCoundown(type) {
+    let count = 0
     switch (type) {
       case 'days':
-        return Math.floor(diff / (1000 * 60 * 60 * 24))
+        count = Math.floor(diff / (1000 * 60 * 60 * 24))
+        break
       case 'hours':
-        return Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        count = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        break
       case 'minutes':
-        return Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        count = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        break
       case 'seconds':
-        return Math.floor((diff % (1000 * 60)) / 1000)
-      default:
-        return 0
+        count = Math.floor((diff % (1000 * 60)) / 1000)
+        break
     }
+    let countString = count.toString()
+    if (count.toString().length == 1) return `0${countString}`
+    return countString
   }
 
   return (
-    <div className="font-orbitron bg-themeprimary text-white tracking-wider rounded p-4 mt-4 flex justify-between gap-2 items-center text-2xl">
+    <div className="font-orbitron font-bold text-themeprimary tracking-wider rounded p-4 mt-4 flex justify-between gap-2 items-center text-2xl">
       {/* {diff} */}
       <Item>{getCoundown('days')}</Item>
-      <Divider />
       <Item>{getCoundown('hours')}</Item>
-      <Divider />
       <Item>{getCoundown('minutes')}</Item>
-      <Divider />
       <Item>{getCoundown('seconds')}</Item>
     </div>
   )
