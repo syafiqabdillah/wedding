@@ -19,7 +19,7 @@ function Mempelai({ nama, ayah, ibu, tipe, className }) {
 function Event({ name, time, className, aos }) {
   return (
     <div data-aos={aos} className={`flex flex-col gap-2 ${className}`}>
-      <div className="text-2xl font-greatvibes">{name}</div>
+      <LightText className="text-xs">{name}</LightText>
       <LightText className="text-sm">{time}</LightText>
     </div>
   )
@@ -31,14 +31,14 @@ function Details() {
       <Mempelai
         nama="Afifa Sausan Shadrina"
         tipe="Putri"
-        ayah="John Doe"
-        ibu="John Doe"
+        ayah="Bambang Dwi Laksono"
+        ibu="Vera Adriana"
       />
       <Mempelai
         nama="Syafiq Abdillah Umarghanis"
         tipe="Putra"
-        ayah="John Doe"
-        ibu="John Doe"
+        ayah="Isro Umarghani"
+        ibu="Siti Aini Rochmah"
         className={'mt-8'}
       />
       <hr
@@ -48,12 +48,12 @@ function Details() {
       <Event
         name="Akad"
         aos="flip-right"
-        time="Sabtu, 4 September 2022 08.00 WIB"
+        time="Ahad, 4 September 2022 08.00 WIB"
       />
       <Event
         name="Resepsi"
         aos="flip-left"
-        time="Sabtu, 4 September 2022 10.00 WIB"
+        time="Ahad, 4 September 2022 11.00 - 13.00 WIB"
         className="my-4"
       />
       <Counter />

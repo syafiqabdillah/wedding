@@ -2,7 +2,12 @@ import React from 'react'
 
 function LightText(props) {
   return (
-    <p className={`font-extralight ` + props.className}>{props.children}</p>
+    <p
+      onClick={() => (props.onClick ? props.onClick() : null)}
+      className={`font-extralight ` + props.className}
+    >
+      {props.children}
+    </p>
   )
 }
 

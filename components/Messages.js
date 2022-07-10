@@ -73,22 +73,26 @@ function Form({ setShowForm }) {
             disabled={loading}
           />
         </div>
-        {isFormValid() && (
-          <Button
-            className="mx-auto flex gap-3 items-center"
-            onClick={() => submitMessage()}
-            disabled={text == '' || sender == ''}
-          >
-            {loading ? (
-              'Mengirimkan pesan...'
-            ) : (
-              <React.Fragment>
-                <FontAwesomeIcon className="h-4" icon={faPaperPlane} /> Kirim
-                Pesan
-              </React.Fragment>
-            )}
-          </Button>
-        )}
+        <Button
+          className="mx-auto flex gap-3 items-center"
+          onClick={() => submitMessage()}
+          disabled={text == '' || sender == ''}
+        >
+          {loading ? (
+            'Mengirimkan pesan...'
+          ) : (
+            <React.Fragment>
+              <FontAwesomeIcon className="h-4" icon={faPaperPlane} /> Kirim
+              Pesan
+            </React.Fragment>
+          )}
+        </Button>
+        <LightText
+          className="underline cursor-pointer w-full text-center text-sm tracking-wider"
+          onClick={() => setShowForm(false)}
+        >
+          Kembali
+        </LightText>
       </form>
     </div>
   )
