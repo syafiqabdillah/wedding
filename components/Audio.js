@@ -71,7 +71,7 @@ function Audio({ audio, showCover, setShowCover }) {
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-themeprimary text-white hover:brightness-110 hover:-rotate-45 transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[120px] w-[120px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
+            className="bg-themeprimary text-white hover:brightness-[150%] transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[120px] w-[120px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
           >
             Buka
           </div>

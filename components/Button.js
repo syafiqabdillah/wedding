@@ -8,7 +8,9 @@ function Button(props) {
         props.disabled
       } border ${
         props.disabled ? 'border-gray-200' : 'border-themeprimary'
-      } hover:brightness-110 text-themeprimary ${props.className}`}
+      } hover:brightness-110 text-themeprimary font-light hover:text-themebg hover:bg-themeprimary transition duration-300 ${
+        props.className
+      }`}
       onClick={() => (props.disabled ? null : props.onClick())}
     >
       {props.children}
