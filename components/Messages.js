@@ -82,6 +82,7 @@ function Form({ setShowForm }) {
           className="mx-auto flex gap-3 items-center"
           onClick={() => submitMessage()}
           disabled={text == '' || sender == ''}
+          loading={loading}
         >
           {loading ? (
             'Mengirimkan pesan...'
