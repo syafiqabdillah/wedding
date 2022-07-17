@@ -55,30 +55,17 @@ function Audio({ audio, showCover, setShowCover }) {
             <LightText className="text-sm mb-8 text-themeprimary">
               Welcome to The Wedding of
             </LightText>
-            <div
-              data-aos="fade-right"
-              className="font-greatvibes tracking-wider"
-            >
-              Afifa
-            </div>
+            <div className="font-greatvibes tracking-wider">Afifa</div>
             <div className="font-greatvibes my-6">&</div>
-            <div
-              data-aos="fade-left"
-              className="font-greatvibes tracking-wider"
-            >
-              Syafiq
-            </div>
+            <div className="font-greatvibes tracking-wider">Syafiq</div>
           </div>
           <div
             onClick={() => playSound()}
-            className="bg-themeprimary text-white hover:brightness-[150%] transition-all duration-1000 font-greatvibes text-2xl cursor-pointer p-8 h-[120px] w-[120px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
+            className="bg-themeprimary text-white hover:brightness-[150%] transition-all duration-1000 font-greatvibes text-lg cursor-pointer p-8 h-[120px] w-[120px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
           >
-            Buka
+            Buka Undangan
           </div>
-          <div
-            data-aos="fade-up"
-            className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-4 text-center"
-          >
+          <div className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-4 text-center">
             <LightText className="text-xs">Yth.</LightText>
             <LightText className="capitalize">{name}</LightText>
             <LightText className="">
