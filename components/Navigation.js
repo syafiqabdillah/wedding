@@ -63,7 +63,7 @@ function Navigation({ showCover }) {
   return (
     <div
       className={`z-100 fixed bottom-0 left-0 w-full h-[70px] bg-paper bg-themepeach bg-blend-luminosity border-t flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
-        showCover ? 'opacity-0' : 'opacity-100'
+        showCover ? 'opacity-0' : 'opacity-80'
       }`}
       style={{ zIndex: '100000' }}
     >
