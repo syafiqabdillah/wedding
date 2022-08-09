@@ -10,6 +10,8 @@ module.exports = {
         themesecondary: '#7A86B6',
         themebg: '#F5EDDC',
         themetext: '#3C2C3E',
+        themepeach: '#F8C0AA',
+        themepurple: '#B095AD',
       },
       fontFamily: {
         smooch: ['Smooch', 'cursive'],

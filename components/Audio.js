@@ -40,19 +40,21 @@ function Audio({ audio, showCover, setShowCover }) {
       } ${removed && 'hidden'}`}
     >
       <div
-        className={`-z-10 half-left h-full w-full bg-paper absolute transition duration-1000 left-0 top-0 ${
-          showCover ? '' : ' -translate-x-[150%] opacity-0'
-        }`}
+        className={`-z-10 half-left h-full w-full bg-paper bg-themepeach bg-blend-luminosity
+         absolute transition duration-1000 left-0 top-0 ${
+           showCover ? '' : ' -translate-x-[150%] opacity-0'
+         }`}
       />
       <div
-        className={`-z-10 half-right h-full w-full bg-paper duration-1000 absolute transition left-0 top-0 ${
-          showCover ? '' : ' translate-x-[150%] opacity-0'
-        }`}
+        className={`-z-10 half-right h-full w-full bg-paper bg-themepeach bg-blend-luminosity
+         duration-1000 absolute transition left-0 top-0 ${
+           showCover ? '' : ' translate-x-[150%] opacity-0'
+         }`}
       />
       {showCover && (
         <React.Fragment>
           <div className="text-5xl text-center text-themeprimary">
-            <LightText className="text-sm mb-8 text-themeprimary">
+            <LightText className="text-sm mb-8 text-themeprimary bg-transparent">
               Welcome to The Wedding of
             </LightText>
             <div className="font-greatvibes tracking-wider">Afifa</div>

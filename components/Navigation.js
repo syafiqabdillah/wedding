@@ -51,8 +51,10 @@ function NavigationItem({ id, icon, label = '' }) {
       className="flex justify-center w-12 items-center text-themeprimary cursor-pointer hover:brightness-110 flex-col gap-1"
       onClick={() => onClickNavItem(id)}
     >
-      <FontAwesomeIcon icon={icon} className="h-6" />
-      <LightText className="text-xs text-themeprimary">{label}</LightText>
+      <FontAwesomeIcon icon={icon} className="h-4" />
+      <LightText className="text-sm bg-transparent text-themeprimary">
+        {label}
+      </LightText>
     </div>
   )
 }
@@ -60,7 +62,7 @@ function NavigationItem({ id, icon, label = '' }) {
 function Navigation({ showCover }) {
   return (
     <div
-      className={`z-100 fixed bottom-0 left-0 w-full h-20 bg-paper border-t flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
+      className={`z-100 fixed bottom-0 left-0 w-full h-[70px] bg-paper bg-themepeach bg-blend-luminosity border-t flex justify-evenly sm:justify-center sm:gap-16 transition-all duration-1000 ${
         showCover ? 'opacity-0' : 'opacity-100'
       }`}
       style={{ zIndex: '100000' }}
