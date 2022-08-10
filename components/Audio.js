@@ -12,6 +12,7 @@ function Audio({ audio, showCover, setShowCover }) {
   const router = useRouter()
 
   function playSound() {
+    console.log('play')
     setShowCover(false)
     window.scroll(0, 0)
 
@@ -35,7 +36,7 @@ function Audio({ audio, showCover, setShowCover }) {
 
   return (
     <div
-      className={`z-10 fixed h-screen w-screen top-0 left-0 flex flex-col gap-8 justify-center transition-all duration-1000 items-center ${
+      className={`z-10 fixed h-screen w-screen top-0 left-0 flex flex-col gap-4 justify-center transition-all duration-1000 items-center ${
         showCover ? 'bg-white' : 'opacity-0'
       } ${removed && 'hidden'}`}
     >
@@ -53,6 +54,16 @@ function Audio({ audio, showCover, setShowCover }) {
       />
       {showCover && (
         <React.Fragment>
+          <img
+            src="/img/cloud.png"
+            alt="cloud"
+            className="absolute bottom-4 right-0 -z-10"
+          />
+          <img
+            src="/img/cloud.png"
+            alt="cloud"
+            className="absolute top-4 -left-10 -z-10 -translate-x-1"
+          />
           <div className="text-5xl text-center text-themeprimary">
             <LightText className="text-sm mb-8 text-themeprimary bg-transparent">
               Welcome to The Wedding of
@@ -61,16 +72,18 @@ function Audio({ audio, showCover, setShowCover }) {
             <div className="font-greatvibes my-6">&</div>
             <div className="font-greatvibes tracking-wider">Syafiq</div>
           </div>
-          <div
-            onClick={() => playSound()}
-            className="bg-themeprimary text-white hover:brightness-[150%] transition-all duration-1000 font-greatvibes text-lg cursor-pointer p-8 h-[120px] w-[120px] rounded-full flex justify-center items-center text-center z-10 opacity-100 tracking-widest hover:scale-110"
-          >
-            Buka Undangan
-          </div>
-          <div className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-4 text-center">
-            <LightText className="text-xs">Yth.</LightText>
-            <LightText className="">{name}</LightText>
-            <LightText className="">
+          <img
+            src="/img/stamp.png"
+            onClick={playSound}
+            alt="stamp"
+            height="250"
+            width="250"
+            className="cursor-pointer hover:rotate-12 transition duration-500"
+          />
+          <div className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-2 text-center">
+            <LightText className="text-lg">Yth.</LightText>
+            <LightText className="text-lg">{name}</LightText>
+            <LightText className="text-lg">
               di <span className="">{location}</span>
             </LightText>
           </div>

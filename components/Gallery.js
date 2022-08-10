@@ -20,13 +20,8 @@ function getImageData(src) {
 const FILE_NAMES = [
   'DSCF0274.JPG',
   'DSCF0337.JPG',
-  'DSCF0413.JPG',
-  'DSCF0415.JPG',
   'DSCF0471.JPG',
-  'DSCF0510.JPG',
-  'DSCF0538.JPG',
   'DSCF0663.JPG',
-  'DSCF0689.JPG',
   'DSCF0693.JPG',
   'DSCF0772.JPG',
 ]

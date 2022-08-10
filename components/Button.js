@@ -14,7 +14,7 @@ function Button(props) {
       } border ${
         props.disabled
           ? 'border-gray-200 text-gray-400'
-          : 'border-themeprimary bg-paper hover:text-themebg hover:bg-themeprimary hover:brightness-110'
+          : 'border-themeprimary bg-paper hover:text-themebg hover:bg-themeprimary '
       }  text-themeprimary font-light  transition duration-300 ${
         props.className
       }`}

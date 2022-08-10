@@ -10,10 +10,11 @@ function Mempelai({ nama, ayah, ibu, tipe, className }) {
       data-aos="fade-up"
       className={`flex flex-col items-center ${className}`}
     >
-      <div className="font-greatvibes text-3xl">{nama}</div>
+      <div className="font-greatvibes text-2xl">{nama}</div>
       <LightText className="text-xs my-2">{tipe} dari</LightText>
       <LightText className="text-sm">
-        Bp {ayah} & Ibu {ibu}
+        Bp {ayah} <br />
+        Ibu {ibu}
       </LightText>
     </div>
   )
@@ -35,16 +36,16 @@ function Details() {
   return (
     <Section id="acara">
       <Mempelai
-        nama="Afifa Sausan Shadrina"
+        nama="dr. Afifa Sausan Shadrina"
         tipe="Putri"
-        ayah="Bambang Dwi Laksono"
-        ibu="Vera Adriana"
+        ayah="H. Bambang Dwi Laksono, S.Hut., M.M"
+        ibu="Vera Andriana"
       />
       <Mempelai
-        nama="Syafiq Abdillah Umarghanis"
+        nama="Syafiq Abdillah Umarghanis S.Kom."
         tipe="Putra"
-        ayah="Isro Umarghani"
-        ibu="Siti Aini Rochmah"
+        ayah="H. Isro Umarghani, SIP, M.M"
+        ibu="Dra. Hj. Siti Aini Rochmah"
         className={'mt-8'}
       />
       <hr
