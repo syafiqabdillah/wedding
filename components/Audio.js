@@ -90,7 +90,7 @@ function Audio({ audio, showCover, setShowCover }) {
         </React.Fragment>
       )}
 
-      <audio src="/music/autumn-leaves.mp3" id="audio" loop />
+      <audio src="/music/kennyg-themoment.mp3" id="audio" loop />
       <style jsx>
         {`
           .half-left {
