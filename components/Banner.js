@@ -29,7 +29,7 @@ function Banner() {
         </div>
       </h1>
       <LightText className="mt-4 font-extralight">
-        Sabtu, 4 September 2022
+        Ahad, 4 September 2022
       </LightText>
     </Section>
   )
