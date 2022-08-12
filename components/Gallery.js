@@ -3,8 +3,7 @@ import ImageGallery from 'react-image-gallery'
 
 import Section from './Section'
 
-const THUMBNAIL_CLASS =
-  'h-[100px] w-[100px] cover overflow-hidden object-bottom'
+const THUMBNAIL_CLASS = 'w-[100px] cover overflow-hidden object-bottom'
 
 function getImageData(src) {
   return {

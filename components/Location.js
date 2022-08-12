@@ -22,7 +22,7 @@ function Location() {
         <LightText className="text-left font-semibold text-themeprimary mt-2 mb-2">
           Felfest UI Faculty Club Universitas Indonesia
         </LightText>
-        <LightText className="text-left text-xs tracking-wide">
+        <LightText className="text-left text-xs tracking-wide mb-2">
           Kampus UI, Jl. Prof. DR. Miriam Budiardjo, RW.3, Srengseng Sawah, Kec.
           Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640
         </LightText>
