@@ -9,6 +9,7 @@ function Audio({ audio, showCover, setShowCover }) {
   const [removed, setRemoved] = useState(false)
   const [name, setName] = useState(null)
   const [location, setLocation] = useState(null)
+  const [v2, setV2] = useState(false)
   const router = useRouter()
 
   function playSound() {
@@ -31,6 +32,9 @@ function Audio({ audio, showCover, setShowCover }) {
     } else {
       setName('Saudara/i')
       setLocation('Tempat')
+    }
+    if (query.ver && query.ver === '2') {
+      setV2(true)
     }
   }, [router.query])
 
@@ -80,13 +84,15 @@ function Audio({ audio, showCover, setShowCover }) {
             width="250"
             className="cursor-pointer hover:rotate-12 transition duration-500"
           />
-          <div className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-2 text-center">
-            <LightText className="text-lg">Yth.</LightText>
-            <LightText className="text-lg">{name}</LightText>
-            <LightText className="text-lg">
-              di <span className="">{location}</span>
-            </LightText>
-          </div>
+          {!v2 && (
+            <div className="h-[150px] text-sm border w-[300px] z-10 bg-white text-themeprimary rounded-xl flex flex-col justify-center item-center gap-2 text-center">
+              <LightText className="text-lg">Yth.</LightText>
+              <LightText className="text-lg">{name}</LightText>
+              <LightText className="text-lg">
+                di <span className="">{location}</span>
+              </LightText>
+            </div>
+          )}
         </React.Fragment>
       )}
 

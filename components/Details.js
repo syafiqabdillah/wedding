@@ -1,4 +1,5 @@
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
 import Counter from './Counter'
 
 import LightText from './LightText'
@@ -33,13 +34,23 @@ function Event({ name, time, className, aos }) {
 }
 
 function Details() {
+  const router = useRouter()
+  const [v2, setV2] = useState(false)
+
+  useEffect(() => {
+    const query = router.query
+    if (query.ver && query.ver === '2') {
+      setV2(true)
+    }
+  }, [router.query])
+
   return (
     <Section id="acara">
       <Mempelai
         nama="dr. Afifa Sausan Shadrina"
         tipe="Putri"
         ayah="H. Bambang Dwi Laksono, S.Hut., M.M"
-        ibu="Vera Andriana"
+        ibu={v2 ? 'Neny Indriyana, S.Hut, MT' : 'Vera Andriana'}
       />
       <Mempelai
         nama="Syafiq Abdillah Umarghanis S.Kom."
