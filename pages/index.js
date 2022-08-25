@@ -53,6 +53,34 @@ export default function Home() {
           content="Welcome to the wedding of Afifa & Syafiq"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://afifasyafiqjourney.my.id/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://afifasyafiqjourney.my.id/" />
+        <meta property="og:title" content="Wedding of Afifa & Syafiq" />
+        <meta
+          property="og:description"
+          content="Welcome to the wedding of Afifa & Syafiq"
+        />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/bXCqRvG/DSCF0594-1.jpg"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://afifasyafiqjourney.my.id/"
+        />
+        <meta property="twitter:title" content="Wedding of Afifa & Syafiq" />
+        <meta
+          property="twitter:description"
+          content="Welcome to the wedding of Afifa & Syafiq"
+        />
+        <meta
+          property="twitter:image"
+          content="https://i.ibb.co/bXCqRvG/DSCF0594-1.jpg"
+        ></meta>
       </Head>
 
       <main className="relative flex flex-col">
