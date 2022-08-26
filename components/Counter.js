@@ -45,10 +45,16 @@ function Counter() {
   return (
     <div className="font-orbitron font-bold text-themeprimary tracking-wider rounded p-4 flex justify-between gap-2 items-center text-2xl">
       {/* {diff} */}
-      <Item>{getCoundown('days')}</Item>
-      <Item>{getCoundown('hours')}</Item>
-      <Item>{getCoundown('minutes')}</Item>
-      <Item>{getCoundown('seconds')}</Item>
+      {diff > 0 ? (
+        <React.Fragment>
+          <Item>{getCoundown('days')}</Item>
+          <Item>{getCoundown('hours')}</Item>
+          <Item>{getCoundown('minutes')}</Item>
+          <Item>{getCoundown('seconds')}</Item>
+        </React.Fragment>
+      ) : (
+        <React.Fragment></React.Fragment>
+      )}
     </div>
   )
 }

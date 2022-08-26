@@ -11,11 +11,7 @@ import Section from './Section'
 
 function Message({ message, sender }) {
   return (
-    <div
-      className="flex flex-col text-sm items-start gap-2 w-full border-b pb-4"
-      data-aos="fade-left"
-      data-aos-offset="0"
-    >
+    <div className="flex flex-col text-sm items-start gap-2 w-full border-b pb-4">
       <LightText className="text-justify text-gray-500">
         &ldquo;{message}&rdquo;
       </LightText>
