@@ -64,7 +64,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://i.pinimg.com/originals/04/4d/16/044d16aa7613f96a55cbd28eaa7a604d.jpg"
+          content="https://i.ibb.co/DCwbnV0/DSCF0337.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -79,7 +79,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://i.pinimg.com/originals/04/4d/16/044d16aa7613f96a55cbd28eaa7a604d.jpg"
+          content="https://i.ibb.co/DCwbnV0/DSCF0337.jpg"
         ></meta>
       </Head>
 
