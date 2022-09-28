@@ -64,14 +64,9 @@ function Details() {
         className="border my-4 w-[300px] border-themeprimary"
       />
       <Event
-        name="Akad"
-        aos="flip-right"
-        time="Ahad, 4 September 2022 08.00 WIB"
-      />
-      <Event
-        name="Resepsi"
+        name="Syukuran"
         aos="flip-left"
-        time="Ahad, 4 September 2022 11.00 - 13.00 WIB"
+        time="Sabtu, 15 Oktober 2022 pukul 10.00 - 13.00 WITA"
         className="my-4"
       />
       <Counter />

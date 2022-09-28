@@ -70,7 +70,7 @@ function Audio({ audio, showCover, setShowCover }) {
           />
           <div className="text-5xl text-center text-themeprimary">
             <LightText className="text-sm mb-8 text-themeprimary bg-transparent">
-              Welcome to The Wedding of
+              Selamat Datang di Syukuran Pernikahan
             </LightText>
             <div className="font-greatvibes tracking-wider">Afifa</div>
             <div className="font-greatvibes my-6">&</div>
