@@ -47,24 +47,27 @@ export default function Home() {
   return (
     <div className="min-h-screen min-w-[360px]">
       <Head>
-        <title>Wedding of Afifa & Syafiq</title>
+        <title>Syukuran Pernikahan Afifa & Syafiq</title>
         <meta
           name="description"
-          content="Welcome to the wedding of Afifa & Syafiq"
+          content="Selamat datang di acara syukuran pernikahan Afifa & Syafiq"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://afifasyafiqjourney.my.id/" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://afifasyafiqjourney.my.id/" />
-        <meta property="og:title" content="Wedding of Afifa & Syafiq" />
+        <meta
+          property="og:title"
+          content="Syukuran Pernikahan Afifa & Syafiq"
+        />
         <meta
           property="og:description"
-          content="Welcome to the wedding of Afifa & Syafiq"
+          content="Selamat datang di acara syukuran pernikahan Afifa & Syafiq"
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/DCwbnV0/DSCF0337.jpg"
+          content="https://i.ibb.co/hmjD9nJ/GEE-1901-1.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -72,14 +75,17 @@ export default function Home() {
           property="twitter:url"
           content="https://afifasyafiqjourney.my.id/"
         />
-        <meta property="twitter:title" content="Wedding of Afifa & Syafiq" />
+        <meta
+          property="twitter:title"
+          content="Syukuran Pernikahan Afifa & Syafiq"
+        />
         <meta
           property="twitter:description"
-          content="Welcome to the wedding of Afifa & Syafiq"
+          content="Selamat datang di acara syukuran pernikahan Afifa & Syafiq"
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/DCwbnV0/DSCF0337.jpg"
+          content="https://i.ibb.co/hmjD9nJ/GEE-1901-1.jpg"
         ></meta>
       </Head>
 
