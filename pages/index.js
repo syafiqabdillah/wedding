@@ -67,7 +67,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/hmjD9nJ/GEE-1901-1.jpg"
+          content="https://i.ibb.co/QpYPzjG/afifasyafiq.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -85,7 +85,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/hmjD9nJ/GEE-1901-1.jpg"
+          content="https://i.ibb.co/QpYPzjG/afifasyafiq.jpg"
         ></meta>
       </Head>
 
