@@ -29,7 +29,7 @@ const IMAGES = FILE_NAMES.map((file) => getImageData(file))
 
 function Gallery() {
   return (
-    <Section id="galeri">
+    <Section id="galeri" className=" mb-20">
       <div className="w-full max-w-[360px]">
         <ImageGallery
           items={IMAGES}

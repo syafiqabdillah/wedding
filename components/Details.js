@@ -11,6 +11,7 @@ function Mempelai({ nama, ayah, ibu, tipe, className }) {
       data-aos="fade-up"
       className={`flex flex-col items-center ${className}`}
     >
+
       <div className="font-greatvibes text-2xl">{nama}</div>
       <LightText className="text-xs my-2">{tipe} dari</LightText>
       <LightText className="text-sm">
@@ -46,6 +47,9 @@ function Details() {
 
   return (
     <Section id="acara">
+      <LightText className="mb-8 text-sm max-w-sm">
+        Mengharap dengan hormat kehadiran saudara/i sekalian pada acara syukuran pernikahan putra putri kami
+      </LightText>
       <Mempelai
         nama="dr. Afifa Sausan Shadrina"
         tipe="Putri"
