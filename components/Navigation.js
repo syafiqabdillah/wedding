@@ -32,11 +32,6 @@ const menus = [
     id: 'galeri',
     label: 'Galeri',
   },
-  {
-    icon: faCommentDots,
-    id: 'doa',
-    label: 'Pesan',
-  },
 ]
 
 function onClickNavItem(id) {
