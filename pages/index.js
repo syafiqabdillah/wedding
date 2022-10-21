@@ -95,6 +95,7 @@ export default function Home() {
         <Details />
         <Location />
         <Gallery />
+        <Messages />
         <PauseButton
           audio={audio}
           mute={mute}
